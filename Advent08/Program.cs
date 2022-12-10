@@ -2,9 +2,6 @@
 
 internal class Program
 {
-    /*
-     1540
-     */
     private static void Main(string[] args)
     {
         Console.WriteLine("Hello, World!");
@@ -25,8 +22,7 @@ internal class Program
                 {
                     var anotherTree = int.Parse(input[i][k].ToString());
                     visibility[0] = IsVisibleThrough(currentTree, anotherTree);
-                    //if (visibility[0])
-                        individualScore++;
+                    individualScore++;
                     if (!visibility[0] || (k==0 && visibility[0])) {
                             currentViewingScore = individualScore;
                             break;
@@ -39,8 +35,7 @@ internal class Program
                     var anotherTree = int.Parse(input[i][k].ToString());
 
                     visibility[2] = IsVisibleThrough(currentTree, anotherTree);
-                    //if (visibility[2])
-                        individualScore++;
+                    individualScore++;
                     if (!visibility[2] || (k == forestWidth-1 && visibility[0]))
                     {
                         currentViewingScore *= individualScore;
@@ -54,8 +49,7 @@ internal class Program
                     var anotherTree = int.Parse(input[k][j].ToString());
 
                     visibility[1] = IsVisibleThrough(currentTree, anotherTree);
-                    //if (visibility[1])
-                        individualScore++;
+                    individualScore++;
                     if (!visibility[1] || (k == 0 && visibility[0]))
                     {
                         currentViewingScore *= individualScore;
@@ -69,8 +63,7 @@ internal class Program
                     var anotherTree = int.Parse(input[k][j].ToString());
 
                     visibility[3] = IsVisibleThrough(currentTree, anotherTree);
-                    //if (visibility[3])
-                        individualScore++;
+                    individualScore++;
                     if (!visibility[3] || (k == input.Length-1 && visibility[0]))
                     {
                         currentViewingScore *= individualScore;

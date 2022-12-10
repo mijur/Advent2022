@@ -6,11 +6,6 @@ using System.Xml.Linq;
 
 internal class Program
 {
-    /*
-     * 5324038
-     * 5578196
-     * 4278843
-     */
     private static void Main(string[] args)
     {
         Console.WriteLine("Hello, World!");

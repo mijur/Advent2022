@@ -2,12 +2,6 @@
 {
     private static void Main(string[] args)
     {
-        /*
-         * 7
-         * 6
-         * 10
-         * 11
-         */
         Console.WriteLine("Hello, World!");
         List<string> packets = new List<string>
         {
