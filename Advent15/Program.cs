@@ -8,7 +8,6 @@ internal class Program
         var lines = File.ReadAllLines("input.txt");
         Regex numberRegex = new Regex("-{0,1}[0-9]+");
         Dictionary<Point, Point> pairs = new Dictionary<Point, Point>();
-        int roi = 2000000;
         foreach (var line in lines)
         {
             var matches = numberRegex.Matches(line).ToArray();
@@ -17,7 +16,13 @@ internal class Program
 
             pairs.Add(sensor, beacon);
         }
+        
 
+        Console.WriteLine($"answer1: {CountAtRow(pairs,2000000)}");
+    }
+
+    private static int CountAtRow(Dictionary<Point, Point> pairs,int roi)
+    {
         HashSet<int> points = new HashSet<int>();
         foreach (var pair in pairs)
         {
@@ -32,7 +37,7 @@ internal class Program
             if (pair.Value.Y == roi)
                 points.Remove(pair.Value.X);
         }
-        Console.WriteLine($"answer {points.Count}");
+        return points.Count;
     }
     private static int GetDistance(Point p1, Point p2)
     {
